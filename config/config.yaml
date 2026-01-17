@@ -328,7 +328,7 @@ ai:
   #   - openai: OpenAI
   #   - gemini: Google Gemini
   #   - custom: 自定义 OpenAI 兼容接口（需填写完整 base_url）
-  provider: "custom"              # 提供商
+  provider: "gemini"              # 提供商
   api_key: "AI_API_KEY"                       # API Key（建议使用环境变量 AI_API_KEY）
 
   model: "Business/gemini-2.5-pro"            # 模型名称
@@ -347,7 +347,7 @@ ai:
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
 
-  max_tokens: 5000                  # 最大生成 token 数
+  max_tokens: 0                  # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
 
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -387,7 +387,7 @@ ai_analysis:
   prompt_file: "ai_analysis_prompt.txt"
 
   # 分析内容配置
-  max_news_for_analysis: 50         # 参与分析的新闻数量上限（控制成本关键项）
+  max_news_for_analysis: 150         # 参与分析的新闻数量上限（控制成本关键项）
                                     # 当前默认的【报告模式】是【当前榜单模式】（current），也就是只分析当前在热榜的新闻
                                     # 如果需要让报告呈现出更有参考价值的完整一天的趋势，且你的 token 充裕
                                       # 可开启 daily（当日汇总模式）
