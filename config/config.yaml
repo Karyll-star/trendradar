@@ -328,7 +328,7 @@ ai:
   #   - openai: OpenAI
   #   - gemini: Google Gemini
   #   - custom: 自定义 OpenAI 兼容接口（需填写完整 base_url）
-  provider: "gemini"              # 提供商
+  provider: "custom"              # 提供商
   api_key: "AI_API_KEY"                       # API Key（建议使用环境变量 AI_API_KEY）
 
   model: "gemini-3-pro-high"            # 模型名称
@@ -341,7 +341,7 @@ ai:
                                     # 其他提供商必须填写完整 URL
                                     # 示例: https://api.openai.com/v1/chat/completions
 
-  timeout: 90                       # 请求超时（秒）
+  timeout: 900                       # 请求超时（秒）
 
   # AI 参数配置
   temperature: 1.0                  # 采样温度 (0.0-2.0)
